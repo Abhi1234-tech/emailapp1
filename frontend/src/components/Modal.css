@@ -1,0 +1,163 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  flex-shrink: 0;
+  
+}
+
+.modal-wrapper {
+  width: 336px;
+  height: 388px;
+  border-radius: 4px;
+  border: 1px solid #E4E4EE;
+  background: #FFF;
+  box-shadow:2px 2px 2px 2px #ede8e8;
+  
+  
+  z-index: 1000;
+}
+.title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  
+}
+.title >p{
+  font-size:12px;
+}
+.title >input{
+  height:30%;
+  font-size:10px;
+  width:80%;
+  margin-left:10px;
+}
+.description{
+  display:flex;
+  align-items:center;
+ 
+
+
+}
+.description >p{
+  font-size:12px;
+}
+.description >input{
+  height:50px;
+  font-size:10px;
+  width:75.5%;
+  margin-left:10px;
+}
+
+.subject{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+
+}
+.subject >p{
+  font-size:12px;
+}
+.subject >input{
+  height:30%;
+  font-size:10px;
+  width:80%;
+  margin-left:10px;
+}
+.freq{
+  display:flex;
+  align-items:center;
+  
+
+
+}
+.freq >p{
+  font-size:12px;
+}
+.freq > select{
+  height:30%;
+  font-size:10px;
+  
+  margin-left:10px;
+}
+.repeat{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+
+
+}
+.repeat >p{
+  font-size:12px;
+}
+.repeat .days {
+  display:flex;
+  align-items:center;
+  
+  
+}
+.repeat >ul >p{
+  
+  
+  font-size:11px;
+  border:#e6e6e6 0.6px solid;
+
+  width:20px;
+  heigth:20px;
+  padding:8px;
+}
+.days >p{
+  display:flex;
+  align-items:centre;
+  justify-content:center;
+  border-radius:50%;
+}
+
+
+.time{
+  display:flex;
+  align-items:center;
+  
+
+
+}
+.time >p{
+  font-size:12px;
+}
+.time > select{
+  height:30%;
+  font-size:10px;
+   
+  margin-left:50px;
+}
+.buttons{
+  display:flex;
+  justify-content:flex-end;
+  margin-right:10px;
+}
+.buttons >button{
+  margin:0px 10px;
+  border-radius: 4px;
+  border: 1px solid #E4E4EE;
+  background: #391E5A;
+ color:white;
+}
+.cancel{
+  
+   border-radius: 4px;
+   background: #EBE8EF !important;
+   color: #333 !important;
+}
+.days >button{
+  color:black;
+  border-radius:50px;
+}

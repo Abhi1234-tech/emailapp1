@@ -1,0 +1,58 @@
+
+.table-container {
+  margin-top: 20px;
+}
+
+table {
+  width: 90vw;
+  border-collapse: collapse;
+  margin:0 20px;
+}
+
+thead {
+  border: 1px solid #EEE;
+  background: var(--Blue10, rgba(60, 30, 90, 0.10));
+  color: #333;
+  
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+
+td{
+  background-color:white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+button {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+.handleedit,.handledelete{
+  cursor: pointer;
+}
+th, td {
+  border-bottom: 1px solid #ddd; /* Horizontal border only */
+  padding: 8px;
+  text-align: left;
+}
+
+/* Optional: To remove vertical borders for the first and last columns */
+th:first-child,
+td:first-child {
+  border-left: none;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
