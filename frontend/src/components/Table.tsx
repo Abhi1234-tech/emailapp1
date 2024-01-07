@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Table.css';
 import { useAtom } from 'jotai';
 import { filterData, modalData } from '../atom/Atom';
@@ -13,7 +13,9 @@ export default function Table() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isModalOpen, setModalOpen] = useState(false);
 
+
   const dataToDisplay = filteredData.length > 0 ? filteredData : modalDataValue;
+  console.log(dataToDisplay);
 
   const handleEdit = (index) => {
     setSelectedItem(index);
@@ -23,33 +25,28 @@ export default function Table() {
   const handleDelete = (index) => {
     const deletedItem = dataToDisplay[index];
 
-   
     const newData = [...dataToDisplay];
     newData.splice(index, 1);
 
-    
     setFilteredData(newData);
+    setData(newData);
 
-    
     const newModalData = modalDataValue.filter(item => item.id !== deletedItem.id);
     setData(newModalData);
   };
-
-
-
-
-
-
-
 
   const handleModalClose = () => {
     setModalOpen(false);
   };
 
   const handleModalSave = (editedData) => {
-    const newData = [...filteredData];
+    const newData = [...dataToDisplay];
     newData[selectedItem] = editedData;
+
+    // Update both atoms
     setFilteredData(newData);
+    setData(newData);
+
     setModalOpen(false);
   };
 
